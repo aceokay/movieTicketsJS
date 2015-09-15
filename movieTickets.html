@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-1.11.3.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>Showtime</title>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="jumbotron">
+          <h3>Managers look over here</h3>
+          <a class="btn btn-default" id="add-movie">Add Movie</a>
+          <a class="btn btn-default">Edit Movie</a>
+          <div id="new-movie">
+            <form id="new-movie-form">
+              <div class="form-group">
+                <label for="movie-title">Movie Title</label>
+                <input type="text" id="movie-title" class="form-control" required="true">
+                <label for="movie-time">Show Time</label>
+                <input type="text" id="movie-time" class="form-control" required="true">
+                <button type="submit" class="btn btn-success">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-9">
+        <h1>Showtime</h1>
+        <form id="purchase">
+          <div class="form-group">
+            <label for="movie">Movie</label>
+            <select name="movie">
+              <option value="snow-dogs">Snow Dogs</option>
+              <option value="air-bud">Air Bud</option>
+              <option value="old-yeller">Old Yeller</option>
+              <option value="lassie">Lassie</option>
+              <option value="all-dogs-go-to-heaven-2">All Dogs Go To Heaven 2</option>
+              <option value="air-caligula">Air Caligula</option>
+              <option value="lady-and-the-tramp">Lady and the Tramp</option>
+              <option value="the-search-for-santa-paws">The Search for Santa Paws</option>
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+
+</body>
+</html>
