@@ -1,3 +1,8 @@
+function Ticket(movie, price) {
+  this.movie = movie;
+  this.price = price;
+}
+
 function Movie(filmTitle) {
   this.filmTitle = filmTitle;
   this.showtimes = [];
@@ -6,6 +11,7 @@ function Movie(filmTitle) {
 function Showtime(showtime) {
   this.showtime = showtime;
 }
+
 
 function resetFields() {
   $('input#movie-title').val("");
@@ -38,8 +44,22 @@ $(document).ready(function() {
       var inputtedShowtime = $(this).find('input#movie-time').val();
       var newShowtime = new Showtime(inputtedShowtime);
       newMovie.showtimes.push(newShowtime);
+
+      $('#movie-dropdown').append("<option value='" + newMovie.filmTitle + "'>" + newMovie.filmTitle + " - " + newShowtime.showtime + "</option>");
     });
-    $('#movie-dropdown').append("<option value='" + newMovie.filmTitle + "'>" + newMovie.filmTitle + "</option>");
+
     resetFields();
+  });
+
+  $('form#purchase').submit(function(event) {
+    event.preventDefault();
+
+    var inputtedMovie = $(this).find('#movie-dropdown option:selected').val();
+    var price = parseInt($(this).find('#customer-type option:selected').val());
+
+    var newTicket = new Ticket(inputtedMovie, price);
+    $('#price-due').append(newTicket.price);
+    $('#movie-showtime').append(newTicket.movie);
+
   });
 });

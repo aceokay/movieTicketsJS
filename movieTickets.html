@@ -36,14 +36,29 @@
       </div>
 
       <div class="col-md-9">
-        <h1>Showtime</h1>
+        <div class="jumbotron">
+          <h1>Showtimes</h1>
+        </div>
         <form id="purchase">
           <div class="form-group">
             <label for="movie">Movie</label>
-            <select class="form-control" id="movie-dropdown">
+            <select class="form-control" id="movie-dropdown" required="true">
+              <option selected disabled>Choose film</option>
             </select>
           </div>
+          <div class="form-group">
+            <select id="customer-type" class="form-control" required="true">
+              <option selected disabled>Ticket Type</option>
+              <option value="25">Adult</option>
+              <option value="20">Student</option>
+              <option value="10">Honored Citizen</option>
+            </select>
+          </div>
+          <button class="btn btn-success">Buy</button>
         </form>
+        <h2 id="movie-choice">Movie: </h2>
+        <h2 id="movie-showtime">Showtime: TBA</h2>
+        <h2 id="price-due">Price due: $</h2>
       </div>
     </div>
 
