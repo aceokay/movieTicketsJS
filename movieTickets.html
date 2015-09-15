@@ -9,9 +9,8 @@
 <body>
   <div class="container">
     <div class="row">
-      <div class="col-md-3">
-        <div class="jumbotron">
-          <h3>Managers look over here</h3>
+      <div class="col-md-3 manager">
+          <h3>Managers</h3>
           <a class="btn btn-default" id="add-movie">Add Movie</a>
           <a class="btn btn-default">Edit Movie</a>
           <div id="new-movie">
@@ -19,13 +18,21 @@
               <div class="form-group">
                 <label for="movie-title">Movie Title</label>
                 <input type="text" id="movie-title" class="form-control" required="true">
-                <label for="movie-time">Show Time</label>
-                <input type="text" id="movie-time" class="form-control" required="true">
-                <button type="submit" class="btn btn-success">Submit</button>
               </div>
+
+              <div id="new-showtimes">
+                <div class="new-showtime">
+                  <div class="form-group">
+                    <label for="movie-time">Show Time</label>
+                    <input type="time" id="movie-time" class="form-control" required="true">
+                  </div>
+                </div>
+              </div>
+
+              <span class="btn btn-primary" id="add-showtime">Add showtime</span>
+              <button type="submit" class="btn btn-success">Submit</button>
             </form>
           </div>
-        </div>
       </div>
 
       <div class="col-md-9">
